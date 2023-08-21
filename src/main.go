@@ -2,23 +2,26 @@ package main
 
 import "fmt"
 
-func main()  {
-	if isPair(6) {
-		fmt.Println("Number is pair")
-	} else {
-		fmt.Println("Number is odd")
-	}
-	if isValidUser("Alpha5", "MyPassword") {
-		fmt.Println("Credentials are valid")
-	} else {
-		fmt.Println("Credentials aren't valid")
-	}
-}
+func main() {
+	// Estructura condicional - Switch
+	var dia int8 = 4
 
-func isPair(num int) bool {
-	return num % 2 == 0
-}
-
-func isValidUser(userName, pass string) bool {
-	return userName == "Alpha" && pass == "MyPassword"
+	switch dia {
+	case 1:
+		fmt.Println("Lunes")
+	case 2:
+		fmt.Println("Martes")
+	case 3:
+		fmt.Println("Miercoles")
+	case 4:
+		fmt.Println("Jueves")
+	case 5:
+		fmt.Println("Viernes")
+	case 6:
+		fmt.Println("Sabado")
+	case 7:
+		fmt.Println("Domingo")
+	default:
+		fmt.Println("Ese no es un día valido de la semana!")
+	}
 }
