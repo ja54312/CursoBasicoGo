@@ -3,25 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	// Estructura condicional - Switch
-	var dia int8 = 4
+	//Defer ejecuta esta funcion antes de que acabe el codigo
+	defer fmt.Println("Hola")
+	fmt.Println("Mundo")
 
-	switch dia {
-	case 1:
-		fmt.Println("Lunes")
-	case 2:
-		fmt.Println("Martes")
-	case 3:
-		fmt.Println("Miercoles")
-	case 4:
-		fmt.Println("Jueves")
-	case 5:
-		fmt.Println("Viernes")
-	case 6:
-		fmt.Println("Sabado")
-	case 7:
-		fmt.Println("Domingo")
-	default:
-		fmt.Println("Ese no es un día valido de la semana!")
+	// Continue y break
+	for i:=0 ; i<10;i++{
+		fmt.Println(i)
+		//Continue
+		if i == 2{
+			fmt.Println("Es 2")
+			continue
+		}
+
+		//Break
+		if i == 8 {
+			fmt.Println("Break")
+			break
+		}
 	}
 }
