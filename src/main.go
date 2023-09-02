@@ -2,21 +2,15 @@ package main
 
 import "fmt"
 
+type car struct {
+	brand   string
+	year    int
+	seating int
+	color   string
+	owner   string
+}
+
 func main() {
-	m := make(map[string]int)
-
-	m["Jose"] = 14
-	m["Pepito"] = 20
-
-	fmt.Println(m)
-
-
-	// Recorrer un map
-	for i, v := range m {
-		fmt.Printf("%s tiene %d años\n", i, v)
-	}
-
-	// Encontrar un valor
-	value, ok := m["Jose"]
-	fmt.Println(value, ok)
+	myCar := car{brand: "Toyota", year: 2018, seating: 10, color: "Rojo", owner: "Eliaz Bobadilla"}
+	fmt.Println("Los Datos de mi auto son:", myCar)
 }
