@@ -1,16 +1,16 @@
 package main
 
-import "fmt"
-
-type car struct {
-	brand   string
-	year    int
-	seating int
-	color   string
-	owner   string
-}
+import (
+	pk "CursoBasicoGo/src/mypackage.go"
+	"fmt"
+)
 
 func main() {
-	myCar := car{brand: "Toyota", year: 2018, seating: 10, color: "Rojo", owner: "Eliaz Bobadilla"}
-	fmt.Println("Los Datos de mi auto son:", myCar)
+	var myCar pk.CarPublic
+	myCar.Brand = "Ferrari"
+	myCar.Year = 2020
+	fmt.Println(myCar)
+	
+	pk.PrintMessage("Hola Platzi")
+
 }
