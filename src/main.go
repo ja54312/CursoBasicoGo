@@ -1,16 +1,15 @@
 package main
 
 import (
-	pk "CursoBasicoGo/src/mypackage.go"
+	rt "CursoBasicoGo/src/16.Punteros/reto"
 	"fmt"
 )
 
 func main() {
-	var myCar pk.CarPublic
-	myCar.Brand = "Ferrari"
-	myCar.Year = 2020
-	fmt.Println(myCar)
-	
-	pk.PrintMessage("Hola Platzi")
-
+	myPc := rt.New(12, 200, "HP")
+	myPc.SetRam(16)
+	myPc.FormatPrint()
+	fmt.Println("Se duplica la ram")
+	myPc.DuplicateRAM()
+	myPc.FormatPrint()
 }
